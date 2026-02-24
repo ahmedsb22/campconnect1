@@ -81,11 +81,12 @@ public class CampingSite {
     @Column(nullable = false)
     private Integer reviewCount = 0;
 
-    // Owner relationship
+    // Dans CampingSite.java (l'entité)
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner_id", nullable = true)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "reservations", "password", "roles"})
+    @JoinColumn(name = "owner_id")
+    @JsonIgnore  // ← AJOUTEZ CETTE LIGNE
     private User owner;
+
 
     // Reservations relationship
     @JsonIgnore
@@ -100,4 +101,6 @@ public class CampingSite {
     @UpdateTimestamp
     @Column(nullable = false)
     private LocalDateTime updatedAt;
+
+
 }
