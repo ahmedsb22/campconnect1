@@ -35,7 +35,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Security & JWT - DISABLED FOR OPEN ACCESS
+        <!-- Security & JWT -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -57,7 +57,12 @@
             <version>0.11.5</version>
             <scope>runtime</scope>
         </dependency>
-        -->
+
+        <!-- Java Mail Sender (for forgot-password emails) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
 
         <!-- Validation -->
         <dependency>
